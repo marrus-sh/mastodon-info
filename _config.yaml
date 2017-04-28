@@ -1,4 +1,5 @@
 title         : "MastoBlog"
+url           : "https://marrus-sh.github.io/mastodon-info"
 description   : "Bringing you the latest in (unofficial) Mastodon News"
 lang          : "en"
 permalink     : "/:categories/:title-0:year:month:day.html"
