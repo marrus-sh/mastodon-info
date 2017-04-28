@@ -5,7 +5,7 @@ lede          : "In version 1.3 of the Mastodon software, the Mastodon developme
 date          : "2017-04-27 18:50:00 -0800"
 author        : "ALLIE \u2764 HART"
 tags          : "privacy"
-redirect_from : "/everything-you-need-to-know-about-privacy-v1.3-020150428.html"
+redirect_from : "/mastodon-info/everything-you-need-to-know-about-privacy-v1.3-020150428.html"
 ---
 
 In [version 1.3](https://github.com/tootsuite/mastodon/releases/tag/v1.3) of the Mastodon software, the Mastodon development team [made changes](https://github.com/tootsuite/mastodon/pull/2111) to how post privacy settings work&mdash;particularly, with respect to the `private` post setting.
