@@ -1,0 +1,24 @@
+---
+layout : "default"
+---
+
+<main>
+  {% for post in paginator.posts %}
+  <article>
+    <header>
+      <a href="{{ post.url }}" target="_self">
+        <h3>{{ post.title }}</h3>
+        <aside>Published {{post.date | date: "%d %B %Y"}}{% if post.author %} by {{post.author}}{% endif %}.</aside>
+      </a>
+    </header>
+    {{ post.content | strip_html | truncatewords: 40 }}
+  </article>
+  {% endfor %}
+</main>
+
+<footer>
+  <nav>
+    <a href="{{ paginator.previous_page_path }}" target="_self" {% unless paginator.previous_page %}hidden{% endunless %}>Previous</a>
+    <a href="{{ paginator.previous_next_path }}" target="_self" {% unless paginator.next_page %}hidden{% endunless %}>Next</a>
+  </nav>
+</footer>

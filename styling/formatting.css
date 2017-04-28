@@ -1,0 +1,398 @@
+@charset "UTF-8";
+
+/*  GLOBAL RULES  */
+
+*:root {
+  font-family: "Lusitana", "Junicode", "Iowan Old Style", "Hoefler Text", "Unifont LANGDEV", "Unifont Upper", "Unifont", serif;
+  font-size: large;
+  font-weight: 400;
+  line-height: 1.35;
+  font-synthesis: none;
+  text-align: justify;
+  quotes: "‘" "’" "“" "”";
+}
+
+@media print {
+
+  *:root {
+    color: black;
+    background: white;
+    font-family: "Times New Roman", serif;
+  }
+
+}
+
+*[title]:not([title=""]):not(a) {
+  border-bottom: dotted currentColor black;
+  cursor: help;
+}
+
+@supports (text-decoration-style: dotted) {
+  *[title]:not([title=""]):not(a) {
+    border: none;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+  }
+}
+
+*:lang(en) {
+  quotes: "‘" "’" "“" "”";
+}
+
+/*  PAGE  */
+
+html, body {
+  background: #ffffff;
+  color: #313543;
+}
+
+body > header, body > a[href] > header {
+  font-family: "Catamaran", sans-serif;
+  text-align: right;
+}
+
+@media (min-width: 57rem) {
+  body > header, body > a[href] > header {
+    text-align: left;
+  }
+}
+
+body > header h1, body > a[href] > header h1 {
+  font-size: 5em;
+  font-weight: 800;
+  line-height: 1;
+  text-align: inherit;
+}
+
+body > header a[href], body > header a[href]:hover, body > a[href] {
+  color: inherit;
+}
+
+body > header aside, body > a[href] > header aside {
+  font-size: inherit;
+  font-weight: 100;
+  line-height: 1.25;
+  text-align: inherit;
+  text-overflow: ellipsis;
+}
+
+body > header p, body > a[href] > header p {
+  text-indent: 0;
+}
+
+/*  SECTIONING  */
+
+aside {
+  font-family: "Catamaran", sans-serif;
+  font-weight: 100;
+  line-height: 1.25;
+  text-align: left;
+  color: #606984;
+}
+
+header aside {
+  font-size: .85em;
+}
+
+footer {
+  font-family: "Catamaran", sans-serif;
+  font-size: .85em;
+  font-weight: 100;
+  line-height: 1.25;
+  text-align: right;
+  color: #606984;
+}
+
+blockquote > footer:last-child::before {
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+header {
+  text-align: left;
+}
+
+main {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+nav {
+  text-align: center;
+}
+
+/*  TABLES  */
+
+table {
+  text-align: left;
+}
+
+thead {
+  font-weight: 700;
+  text-align: center;
+}
+
+th {
+  text-align: center;
+  text-decoration: underline;
+}
+
+/*  LISTS  */
+
+ul, ol, dl {
+  text-align: left;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+li ul {
+  list-style-type: square;
+}
+
+li li ul {
+  list-style-type: disc;
+}
+
+li li li ul {
+  list-style-type: circle;
+}
+
+li li li li ul {
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: upper-roman;
+}
+
+li ol {
+  list-style-type: decimal-leading-zero;
+}
+
+li li ol {
+  list-style-type: lower-latin;
+}
+
+li li li ol {
+  list-style-type: lower-greek;
+}
+
+li li li li ol {
+  list-style-type: decimal;
+}
+
+dt {
+  font-weight: bold;
+}
+
+/*  BLOCK ELEMENTS  */
+
+blockquote::before, blockquote::after {
+  font-family: "Catamaran", sans-serif;
+  font-size: 2em;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+}
+
+figcaption {
+  font-size: .85em;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #191b22;
+  font-family: "Catamaran", sans-serif;
+  font-weight: 800;
+  text-align: left;
+}
+
+h1 {
+  font-size: 5em;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 3em;
+  line-height: 1.3125;
+}
+
+h3 {
+  font-size: 1.75em;
+  line-height: 1;
+}
+
+h4 {
+  font-size: 1.4em;
+  line-height: 1.25;
+}
+
+h5 {
+  font-size: inherit;
+  font-variant: small-caps;
+  line-height: inherit;
+}
+
+h6 {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+hr, hr::after {
+  text-align: center;
+  white-space: pre;
+}
+
+p::before, p::after {
+  color: #9baec8;
+  line-height: 1;
+}
+
+pre {
+  font-family: "Unifont LANGDEV", "Unifont Upper", "Unifont", monospace;
+  font-size: .85em;
+  font-weight: normal;
+  line-height: 1;
+  white-space: pre-wrap;
+}
+
+svg {
+  color: inherit;
+}
+
+/*  PHRASING  */
+
+a[href] {
+  color: inherit;
+  text-decoration: none;
+  text-decoration-color: inherit;
+  transition: color .3s;
+  transition: color .3s, text-decoration-color .3s;
+}
+
+a[href]:hover {
+  color: #2b90d9;
+  text-decoration-color: transparent;
+}
+
+main a[href] {
+  display: inline;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+}
+
+header a[href], nav a[href] {
+  text-decoration: none;
+}
+
+@media print {
+
+  a[href] {
+    text-decoration: none;
+  }
+
+  a[href]::after {
+    content: " [" attr(href) "]";
+  }
+
+}
+
+@supports (text-decoration-style: dotted) {
+  abbr {
+    border: none;
+  }
+}
+
+a[href] b, a[href] code, a[href] em, a[href] i, a[href] small, a[href] strong, a[href] u {
+  transition: color .3s;
+}
+
+a[href]:hover b, a[href]:hover code, a[href]:hover em, a[href]:hover i, a[href]:hover small, a[href]:hover strong, a[href]:hover u {
+  color: inherit;
+}
+
+b {
+  color: #191b22;
+  font-weight: 700;
+}
+
+cite {
+  font-style: inherit;
+}
+
+code {
+  color: #000000;
+  font-size: .85em;
+  font-family: "Unifont LANGDEV", "Unifont Upper", "Unifont", monospace;
+  line-height: 1;
+}
+
+del {
+  color: #df405a;
+  text-decoration: line-through;
+}
+
+dfn {
+  font-style: inherit;
+  font-weight: 700;
+}
+
+em {
+  font-style: inherit;
+  text-decoration: underline;
+}
+
+i, u {
+  color: #191b22;
+}
+
+aside i, aside u {
+  color: #444b5d;
+}
+
+i {
+  font-style: inherit;
+}
+
+i::before {
+  content: open-quote;
+}
+
+i::after {
+  content: close-quote;
+}
+
+ins {
+  color: #79bd9a;
+  text-decoration: underline;
+}
+
+s {
+  text-decoration: line-through;
+}
+
+small {
+  color: #606984;
+  font-size: inherit;
+}
+
+strong {
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-style: double;
+  font-weight: 700;
+}
+
+sup {
+  text-transform: uppercase;
+}
+
+u {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}

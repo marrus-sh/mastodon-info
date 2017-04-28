@@ -1,0 +1,9 @@
+title         : "MastoBlog"
+description   : "Bringing you the latest in (unofficial) Mastodon News"
+lang          : "en"
+permalink     : "/:categories/:title-0:year:month:day.html"
+paginate      : 7
+paginate_path : "/:num/"
+timezone      : "America/Pacific"
+kramdown:
+    smart_quotes: ["apos", "apos", "quot", "quot"]

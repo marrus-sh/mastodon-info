@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title | default: site.github.repository_name }}</title>
+<base target="_blank">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="{{ '/styling/index.css?v=' | append: site.github.build_revision | relative_url }}">
+
+<a href="{{ site.url }}/" target="_self">
+  <header>
+    <h1>{{ site.title | default: site.github.repository_name }}</h1>
+    <aside>
+      <p> {{ site.description | default: site.github.project_tagline }}
+    </aside>
+  </header>
+</a>
+
+{{ content }}

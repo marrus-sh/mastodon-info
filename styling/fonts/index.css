@@ -1,0 +1,26 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Catamaran:100,800|Lusitana:400,700&subset=latin,latin-ext');
+
+@font-face {
+  font-family: "Unifont";
+  src: url('../fonts/Unifont.woff') format('woff'),
+       url('../fonts/Unifont.ttf')  format('truetype');
+  font-weight: 400;
+  unicode-range: U+0-FFFF;
+}
+
+@font-face {
+  font-family: "Unifont Upper";
+  src: url('../fonts/Unifont-Upper.woff') format('woff'),
+       url('../fonts/Unifont-Upper.ttf')  format('truetype');
+  font-weight: 400;
+  unicode-range: U+10000-100FFF;
+}
+
+@font-face {
+  font-family: "Unifont LANGDEV";
+  src: url('../fonts/UnifontLANGDEV.woff') format('woff'),
+       url('../fonts/UnifontLANGDEV.ttf')  format('truetype');
+  font-weight: 400;
+  unicode-range: U+101000-1017FF;
+}
