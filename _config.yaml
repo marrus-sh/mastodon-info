@@ -5,6 +5,8 @@ lang          : "en"
 permalink     : "/:categories/:title-0:year:month:day.html"
 paginate      : 7
 paginate_path : "/:num/"
-timezone      : "America/Pacific"
+timezone      : "US/Pacific"
 kramdown:
     smart_quotes: ["apos", "apos", "quot", "quot"]
+gems:
+  - jekyll-redirect-from
