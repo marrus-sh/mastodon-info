@@ -4,8 +4,7 @@ title    : "Everything You Need to Know About Mastodon's New Privacy Settings"
 lede     : "In version 1.3 of the Mastodon software, the Mastodon development team made changes to how post privacy settings work&mdash;particularly, with respect to the `private` post setting. In this post, we'll take an in-depth look at Mastodon's privacy features, and answer a few common questions about the change."
 date     : "2015-04-27 18:50:00 -0800"
 author   : "ALLIE \u2764 HART"
-category : "privacy"
-tags     : "introductions"
+tags     : "privacy"
 ---
 
 In [version 1.3](https://github.com/tootsuite/mastodon/releases/tag/v1.3) of the Mastodon software, the Mastodon development team [made changes](https://github.com/tootsuite/mastodon/pull/2111) to how post privacy settings work&mdash;particularly, with respect to the `private` post setting.
