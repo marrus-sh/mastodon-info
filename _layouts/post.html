@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="{{ '/styling/index.css?v=' | append: site.github.build_revision | relative_url }}">
-
+<body>
 <a href="{{ site.url }}/" target="_self">
   <header>
     <h1>{{ site.title | default: site.github.repository_name }}</h1>
@@ -17,11 +17,11 @@
 </a>
 
 <main>
-  <article>
+  <article class="h-entry">
     <header>
-      <h2>{{ page.title }}</h2>
+      <h2 class="p-author">{{ page.title }}</h2>
     </header>
-    {{ content }}
-    <footer>Published {{ page.date | date: "%d %B %Y" }}{% if page.author %} by {{ page.author }}{% endif %}.</footer>
+    <span class="e-content">{{ content }}</span>
+    <footer>Published <time class="dt-published" datetime="{{ page.date}}"> {{ page.date | date: "%d %B %Y" }}</time>{% if page.author %} by <span class="p-author">{{ page.author }}</span>{% endif %}.</footer>
   </article>
 </main>
