@@ -4,14 +4,14 @@ layout : "default"
 
 <main>
   {% for post in paginator.posts %}
-  <article>
+  <article class="h-entry">
     <header>
-      <a href="{{ site.url }}{{ post.url }}" target="_self">
-        <h3>{{ post.title }}</h3>
-        <aside>Published {{ post.date | date: "%d %B %Y" }}{% if post.author %} by {{ post.author }}{% endif %}.</aside>
+      <a class= "u-url" href="{{ site.url }}{{ post.url }}" target="_self">
+        <h3 class="p-name">{{ post.title }}</h3>
+        <aside>Published <time class="dt-published" datetime="{{ post.date}}">{{ post.date | date: "%d %B %Y" }}</time>{% if post.author %} by <span class="p-author">{{ post.author }}</span>{% endif %}.</aside>
       </a>
     </header>
-    {{ post.content | strip_html | truncatewords: 40 }}
+    <span class="p-summary">{{ post.content | strip_html | truncatewords: 40 }}</span>
   </article>
   {% endfor %}
 </main>
